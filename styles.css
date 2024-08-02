@@ -1,0 +1,85 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 10vh;
+  background-color: red;
+  align-items: center;
+  position: fixed;
+  z-index: 99;
+}
+
+/* menu con links del menu hamburguesa */
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 10vh;
+  width: 100%;
+  height: 100vh;
+  display: none; /* ****** */
+  background-color: rgba(0, 255, 255, 0.426);
+  text-align: center;
+}
+.menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 20px;
+}
+.menu ul li a {
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.menu.active {
+  display: block;
+}
+.menu-toggle i {
+  font-size: 30px;
+  margin: 5px;
+  cursor: pointer;
+}
+.logo i {
+  font-size: 30px;
+  padding: 5px;
+}
+/* hero con video de fondo */
+#hero {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#hero video {
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  filter: blur(2px);
+}
+.hero-info {
+  position: absolute;
+  top: 20%;
+  left: 35%;
+}
+@media (min-width: 768px) {
+  .hero-info {
+    top: 30%;
+    left: 45%;
+  }
+}
+.hero-info h1 {
+  color: #fff;
+}
+/* video */
+/* #hero video {
+  width: 100%;
+  height: auto;
+} */
